@@ -1,3 +1,30 @@
+@font-face {
+    font-family: neuton;
+    src: url(./Neuton-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: neuton;
+    src: url(./Neuton-ExtraBold.ttf);
+    font-weight:800;
+}
+@font-face {
+    font-family: neuton;
+    src: url(./Neuton-ExtraLight.ttf);
+    font-weight:100;
+}
+@font-face {
+    font-family: neuton;
+    src: url(./Neuton-Light.ttf);
+    font-weight:300;
+}
+@font-face {
+    font-family: neuton;
+    src: url(./Neuton-Regular.ttf);
+    font-weight:500;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +45,7 @@ html, body {
 #page1 {
     min-height: 100vh;
     width: 100vw;
+    border-bottom: 1px solid #000;
     position: relative;
 }
 #nav{
@@ -93,4 +121,72 @@ html, body {
     width: 84%;
     margin-left: 8%;
     margin-top: 60px;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    padding: 80px 100px;
+    text-align: center;
+}
+#page2 h2{
+    font-family: neuton;
+    font-size: 3vw;
+}
+#page2 p{
+    font-size: 1vw;
+    width: 40%;
+    /* background-color: blue; */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
+    color: #777;
+    font-weight: 500;
+}
+#page2 #elem-container{
+
+    /* background-color: lightblue; */
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#elem-container .elem{
+    height: 60vh;
+    width: 25%;
+    /* background-color: #FFB07B; */
+    background-color: transparent;
+    margin: 30px 50px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+.elem img{
+    height: 88%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+    width: 100%;
+}
+.elem h3{
+    font-size:32px;
+    transition: all ease 0.2s;
+    font-family: neuton;
+    margin-top: 15px;
+}
+
+#elem-container .elem:hover{
+    background-color: #FFB07B;
+}
+
+#elem-container .elem:hover img{
+    filter: grayscale(2);
+}
+#elem-container .elem:hover h3{
+    color: #fff;
 }
