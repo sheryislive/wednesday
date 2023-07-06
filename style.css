@@ -7,22 +7,25 @@
 @font-face {
     font-family: neuton;
     src: url(./Neuton-ExtraBold.ttf);
-    font-weight:800;
+    font-weight: 800;
 }
+
 @font-face {
     font-family: neuton;
     src: url(./Neuton-ExtraLight.ttf);
-    font-weight:100;
+    font-weight: 100;
 }
+
 @font-face {
     font-family: neuton;
     src: url(./Neuton-Light.ttf);
-    font-weight:300;
+    font-weight: 300;
 }
+
 @font-face {
     font-family: neuton;
     src: url(./Neuton-Regular.ttf);
-    font-weight:500;
+    font-weight: 500;
 }
 
 * {
@@ -48,93 +51,115 @@ html, body {
     border-bottom: 1px solid #000;
     position: relative;
 }
-#nav{
+
+#nav {
     display: flex;
-    align-items:center ;
+    align-items: center;
     justify-content: center;
     width: 100%;
     height: 90px;
     gap: 10vw;
 
 }
-#nav-part2{
+
+#nav-part2 {
     display: flex;
-    align-items:center ;
+    align-items: center;
     justify-content: center;
     gap: 40px;
 }
-#nav-part3{
+
+#nav-part3 {
     display: flex;
-    align-items:center ;
+    align-items: center;
     justify-content: center;
     gap: 30px;
 }
-#nav-part2 h4{
+
+#nav-part2 h4 {
     font-weight: 400;
     font-size: 18px;
 }
-#nav h1{
+
+#nav h1 {
     font-family: neuton;
     font-size: 38px;
     display: flex;
-    align-items:center ;
+    align-items: center;
 }
-#nav h1 span{
+
+#nav h1 span {
     font-family: neuton;
     color: #FF5858;
     font-size: 48px;
     margin-right: -5px;
 }
-#nav h5{
-    font-size:17px;
+
+#nav h5 {
+    font-size: 17px;
     color: #FF5858;
     font-weight: 400;
 }
-#nav h5:nth-child(3){
+
+#nav h5:nth-child(3) {
     background-color: #151C31;
     color: #fff;
 
     padding: 14px 20px;
     border-radius: 5px;
 }
-#nav i{
+
+#nav i {
     font-size: 20px;
 }
-#center{
+
+#nav #menu {
+    font-weight: 900;
+    color: #FF5858;
+    display: none;
+}
+
+#center {
     text-align: center;
 
     padding-top: 90px;
 }
-#center h1{
+
+#center h1 {
     font-size: 79px;
+    font-size: 4vw;
     font-family: neuton;
 }
-#center h1:nth-child(1){
+
+#center h1:nth-child(1) {
     color: #FF5858;
 }
 
-#center p{
-    font-size: 19px;
+#center p {
+    font-size: 1.2vw;
     margin-top: 30px;
 }
-#page1 img{
+
+#page1 img {
     width: 84%;
     margin-left: 8%;
     margin-top: 60px;
 }
 
-#page2{
+#page2 {
     min-height: 100vh;
     width: 100%;
     /* background-color: red; */
     padding: 80px 100px;
     text-align: center;
 }
-#page2 h2{
+
+#page2 h2 {
     font-family: neuton;
     font-size: 3vw;
 }
-#page2 p{
+
+#page2 p {
     font-size: 1vw;
     width: 40%;
     /* background-color: blue; */
@@ -145,10 +170,11 @@ html, body {
     color: #777;
     font-weight: 500;
 }
-#page2 #elem-container{
+
+#page2 #elem-container {
 
     /* background-color: lightblue; */
-    
+
     width: 100%;
     display: flex;
     align-items: center;
@@ -156,7 +182,8 @@ html, body {
     flex-wrap: wrap;
     justify-content: center;
 }
-#elem-container .elem{
+
+#elem-container .elem {
     height: 60vh;
     width: 25%;
     /* background-color: #FFB07B; */
@@ -166,27 +193,100 @@ html, body {
     border-radius: 5px;
     transition: all ease 0.5s;
 }
-.elem img{
+
+.elem img {
     height: 88%;
     border: 2px solid #000;
     border-radius: 5px;
     transition: all ease 0.5s;
     width: 100%;
 }
-.elem h3{
-    font-size:32px;
+
+.elem h3 {
+    font-size: 32px;
     transition: all ease 0.2s;
     font-family: neuton;
     margin-top: 15px;
 }
 
-#elem-container .elem:hover{
+#elem-container .elem:hover {
     background-color: #FFB07B;
 }
 
-#elem-container .elem:hover img{
+#elem-container .elem:hover img {
     filter: grayscale(2);
 }
-#elem-container .elem:hover h3{
+
+#elem-container .elem:hover h3 {
     color: #fff;
+}
+
+@media (max-width:600px) {
+    #page1{
+        min-height: 80vh;
+    }
+    #nav{
+        justify-content: space-between;
+        padding: 0 7vw;
+    }
+    #nav h1{
+        font-size: 6vw;
+
+    }
+    #nav h1 span{
+    margin-right: -1px;
+    font-size: 7vw;
+    }
+    #nav-part2{
+        display: none;
+    }
+    #nav-part3{
+        display: none;
+    }
+    #menu{
+        display: block !important;
+        font-size: 24px;
+    }
+    #center{
+    padding-top: 25px;
+
+    }
+    #center h1{
+        font-size: 10.5vw;
+    }
+    #center p{
+        font-size: 4vw;
+        margin-top: 10px;
+    }
+    #page1 img{
+        height: 40vh;
+        width: 100%;
+        margin-left: 0;
+    }
+    #page2{
+        padding: 30px 20px;
+    }
+    #page2 h2{
+        font-size: 9vw;
+        /* background-color: red; */
+        /* width: 90%; */
+    }
+    #page2 p{
+        font-size: 4vw;
+        width: 90%;
+        margin-top: 10px;
+    }
+    #page2 #elem-container{
+        margin-top: 30px;
+        
+    }
+    #elem-container .elem{
+        height: 65vh;
+        width: 85vw;
+        margin: 20px 10px;
+    }
+    .elem h3{
+        font-size: 6vw;
+        margin-top: 5px;
+    }
 }

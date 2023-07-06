@@ -22,3 +22,31 @@ tl.from("#nav h1,#nav h4,#nav i,#nav h5",{
     opacity:0,
     duration:0.8
 })
+
+var tl2 = gsap.timeline({
+    scrollTrigger:{
+        trigger:"#page2 h2",
+        scroller:"body",
+        // markers:true,
+        start:"top 80%"
+    }
+})
+tl2.from("#page2 h2",{
+    y:30,
+    opacity:0,
+})
+tl2.from("#page2 p",{
+    y:30,
+    opacity:0,
+})
+gsap.from(".elem",{
+    opacity:0,
+    y:100,
+    scale:0.9,
+    scrollTrigger:{
+        trigger:".elem",
+        scroller:"body",
+        // markers:true,
+        start:"top 70%"
+    }
+})
